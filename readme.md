@@ -130,19 +130,32 @@ urlpatterns = [
 
 ## 📁 Folder Structure
 
+## 📁 Folder Structure
+
 project/
-├── tasks/
-│   ├── models.py
-│   ├── views.py
-│   ├── tasks.py
-│   └── urls.py
-├── project/
-│   ├── settings.py
-│   ├── celery.py
-│   └── __init__.py
-├── manage.py
-├── requirements.txt
-└── README.md
+|__.env                      # env file all dependencies install here
+|
+├── taskmanager/              # Django app for task management
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py             # Contains Task model
+│   ├── serializers.py        # DRF serializers for Task
+│   ├── tasks.py              # Celery async tasks (e.g. auto-complete)
+│   ├── tests.py
+│   ├── urls.py               # App-level route configuration
+│   └── views.py              # Class-based API views
+├── unix_task_project/        # Django project settings and configurations
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── celery.py             # Celery app instance setup
+│   ├── settings.py           # Project-wide settings
+│   └── wsgi.py
+├── db.sqlite3                # SQLite database
+├── manage.py                 # Django CLI
+├── .gitignore
+└── README.md                 # Project documentation
+
 
 ## 🙌 Contribution
 
@@ -157,9 +170,9 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-- Your Name  
-- your.email@example.com  
-- [GitHub](https://github.com/your-username)
+- Amit Kumar 
+- amitraazec53@gmail.com  
+- [GitHub](https://github.com/amitkumar00369)
 ```
 
 ---
